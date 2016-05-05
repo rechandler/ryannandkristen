@@ -1,0 +1,95 @@
+.appPadding{
+    padding: 10px;
+}
+.buttonMargin{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+input[type="text"] {
+    display: block;
+    margin : 0 auto;
+}
+
+select, textarea {
+    display: block;
+    margin : 0 auto;
+}
+.codeInput{
+    width: 30rem !important;
+}
+
+.selectInput{
+    width: 19rem !important;
+}
+
+.textareaInput{
+    width: 22rem !important;
+}
+
+.regButton{
+    height: 161px !important;
+}
+
+
+.animate-enter,
+.animate-leave
+{
+    -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    position: relative;
+    display: block;
+}
+
+.animate-enter.animate-enter-active,
+.animate-leave {
+    opacity: 1;
+    top: 0;
+    height: 30px;
+}
+
+.animate-leave.animate-leave-active,
+.animate-enter {
+    opacity: 0;
+    top: -50px;
+    height: 0px;
+}
+
+.reglinks{
+    display:inline-flex;
+}
+.amazon{
+    margin-top: 5%;
+    width:50%;
+}
+.bbb{
+    margin-top: 5%;
+    width:50%;
+}
+.middleBtn{
+    margin-left:10px;
+    margin-right:10px;
+}
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 736px) {
+    .button{
+        height: auto !important;
+        margin: 6px;
+    }
+
+    .codeInput{
+        width: 95% !important;
+    }
+    .reglinks{
+        display:block;
+    }
+
+    .middleBtn{
+        margin-left:0;
+        margin-right:0;
+    }
+}

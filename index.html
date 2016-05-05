@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ryann and Kristen</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<script src="bower_components/angular/angular.js"></script>
+	</head>
+	<body>
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Welcome</a></li>
+							<li><a href="#one">This is us</a></li>
+							<li><a href="#two">RSVP to our wedding</a></li>
+							<li><a href="#three">Registry</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner backgroundImageUs">
+							<div class="headerText" >
+								<h1>Ryann and Kristen</h1>
+								<h3>August 28, @ the Green Door Gourmet</h3>
+								<p><a id="custRegButton" class="scrolly button" href="#two">RSVP to our wedding</a></p>
+								<!--<ul class="actions">
+									<li><a href="#one" class="button scrolly">Learn more</a></li>
+								</ul>-->
+							</div>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style2 spotlights">
+						<section>
+							<a class="image"><img src="assets/css/images/Ry_and_Me.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>That time we danced at a wedding!</h2>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a class="image"><img src="assets/css/images/beach.jpg" alt="" data-position="top center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>That time we went to the beach!</h2>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a class="image"><img src="assets/css/images/matching.jpg" alt="" data-position="25% 25%" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>That time we wore matching clothes by accident.</h2>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a class="image"><img src="assets/css/images/schshmeagz.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>That time we got a cat and served her pie. (We didn't really serve her pie)</h2>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a class="image"><img src="assets/css/images/hats.jpg" alt="" data-position="top center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>That time with the hats.</h2>
+								</div>
+							</div>
+						</section>
+						<section>
+							<a class="image"><img src="assets/css/images/halloween7.jpg" alt="" data-position="25% 25%" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>That time we were aliens.</h2>
+								</div>
+							</div>
+						</section>
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>RSVP to our Wedding</h2>
+							<p>
+								Thank you for taking the time to visit our site and RSVP to our wedding.
+								We are very excited to be getting married and look forward to being able to celebrate
+								with our closest friends and families.
+							</p>
+							<p>
+								In order speed up the rsvp process (and save a little money), we are asking our guests
+								to rsvp online. We have a very limited number of seats due to the ocupancy limit of the venue.
+								This means we have to be strict with invites.
+							</p>
+							<p>
+								Inside your invitation is a registration code. Please enter the code below to RSVP.
+							</p>
+							<div class="features" ng-app="weddingApp" ng-controller="weddingAppController as vm">
+								<div class="content">
+									<div ng-show="vm.codeError">Please enter your Registration code. If you're having issues
+										feel free to contact us at <br> <a href="mailto:ryann.chandler@gmail.com">ryann.chandler@gmail.com</a> or
+										<a href="mailto:kristenstever@gmail.com">kristenstever@gmail.com</a></div>
+									<div ng-show="vm.submissionError">There was an error contacting the Server. If you're having issues
+										feel free to contact us at <br> <a href="mailto:ryann.chandler@gmail.com">ryann.chandler@gmail.com</a> or
+										<a href="mailto:kristenstever@gmail.com">kristenstever@gmail.com</a></div>
+									<div ng-show="vm.responseError">Yikes something went wrong!<br> Make sure your code is correct and try again, or just feel free to
+										contact us and we'll get you registered!  <br> <a href="mailto:ryann.chandler@gmail.com">ryann.chandler@gmail.com</a> or
+										<a href="mailto:kristenstever@gmail.com">kristenstever@gmail.com</a></div>
+									<div ng-show="vm.rsvpError">Yikes something went wrong!<br> Make sure your code is correct and try again, or just feel free to
+										contact us and we'll get you registered!  <br> <a href="mailto:ryann.chandler@gmail.com">ryann.chandler@gmail.com</a> or
+										<a href="mailto:kristenstever@gmail.com">kristenstever@gmail.com</a></div>
+									<div ng-include="vm.template"></div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				<!-- Three -->
+					<section id="three" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Registries</h2>
+							<p>If you would like to provide a gift you can find our registries at the following
+								links.</p>
+							<div class="style1 wrapper reglinks">
+									<a target="_blank" href="https://www.amazon.com/wedding/registry/B60LJYG18G2J?_encoding=UTF8&ref_=" class="button" style=""><img class="amazon"
+																	 src="/assets/css/images/Amazon-Logo-PNG.png"/></a>
+
+									<a target="_blank" href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&registryId=543247704&pwsurl=" class="middleBtn button"><img class="bbb"
+																	 src="/assets/css/images/Bed-bath-and-beyond-logo.png"/></a>
+
+									<a target="_blank" href="http://www.crateandbarrel.com/gift-registry/kristen-stever-and-ryann-chandler/r5507515" class="button" style=""><img style="margin-top: 5%;width:50%"
+																	 src="/assets/css/images/Crate%20and%20Barrel%20Logo.png"/></a>
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="wrapper appPadding" style="text-align:center">
+					If you have any questions or need help with RSVP-ing, please don't hesitate to email us at
+					<br>
+					<a href="mailto:ryann.chandler@gmail.com">ryann.chandler@gmail.com</a> or
+					<a href="mailto:kristenstever@gmail.com">kristenstever@gmail.com</a>
+				</div>
+				<div class="inner">
+					<ul class="menu" style="text-align:center">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: RCdesigns and <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/app.js"></script>
+			<script src="assets/js/controller.js"></script>
+
+	</body>
+</html>

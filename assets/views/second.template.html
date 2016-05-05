@@ -1,0 +1,13 @@
+<div class="wrapper customWrapper">
+    <h3 class="appPadding">
+        {{vm.secondData.name}}
+    </h3>
+    <div>How many are attending?</div>
+    <select class="selectInput" ng-model="vm.selectedNumberOfGuests">
+        <option value="">-- Select Number In Attendance --</option>
+        <option ng-repeat="option in vm.secondOptions" value="{{option}}">{{option}}</option>
+    </select>
+    <div>Do you have an special considerations or comments?</div>
+    <textarea ng-model="vm.comments" class="textareaInput"></textarea>
+    <button class="buttonMargin" ng-click="vm.submitRSVP()">Complete RSVP</button>
+</div>
